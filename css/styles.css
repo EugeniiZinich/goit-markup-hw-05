@@ -106,6 +106,7 @@ list-style: none;
 
 
 .navigation-link{
+    position: relative;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -119,16 +120,34 @@ list-style: none;
 }
 
 .current::after{
+    position: absolute;
     content: ' ';
     display: block;
-
+    bottom: 0;
     height: 4px;
     width: 100%;
     
 
     background-color: var(--brand-color);
     border-radius: 2px;
+}
 
+/* .navigation-link:after{
+   transform: scale(0); 
+} */
+
+.navigation-link:hover::after{
+    position: absolute;
+    content: ' ';
+    display: block;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    
+
+    background-color: var(--brand-color);
+    border-radius: 2px;
+    /* transform: scale(1); */
 }
 
  .navigation-link:hover,

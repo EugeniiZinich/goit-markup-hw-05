@@ -843,6 +843,8 @@ img {
     padding-bottom: 20px;
 } */
 
+/* ------------MODAL STYLE----------- */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -864,6 +866,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+
+  padding: 40px;
 
   width: 528px;
   min-height: 581px;
@@ -889,6 +893,12 @@ img {
 
   background-color: transparent;
   cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover {
+  fill: var(--brand-color);
 }
 
 .is-hidden {
@@ -896,4 +906,96 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form b {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  margin: 0;
+  padding: 11px 11px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-group label {
+  padding-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.form-group textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+}
+
+.form-group textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-checkbox {
+  margin-bottom: 30px;
+}
+
+.form-checkbox input[type='checkbox'] {
+}
+
+.form-btn {
+  display: inline-block;
+
+  padding: 10px 55px;
+  cursor: pointer;
+
+  border: none;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--second-brand-color);
+
+  background-color: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-form {
+  display: block;
+  text-align: center;
+}
+
+.btn-form .form-btn:hover {
+  background-color: #188ce8;
 }
